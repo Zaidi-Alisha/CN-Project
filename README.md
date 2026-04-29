@@ -58,3 +58,15 @@ The dashboard is designed to reflect the proposal's VPN goals:
 - AES-256-GCM encrypted transport
 - NAT and routing preparation for Linux gateway mode
 - Visual user experience with a creative frontend
+
+<img width="1883" height="864" alt="image" src="https://github.com/user-attachments/assets/190de90a-7c38-486a-b9f8-9fcd2a672a4a" />
+
+<img width="976" height="813" alt="image" src="https://github.com/user-attachments/assets/22285185-f470-426c-baca-dfd17fe4f711" />
+
+<img width="1628" height="822" alt="image" src="https://github.com/user-attachments/assets/3fea76b5-c8df-4e1c-8724-5b3d1093e1db" />
+
+<img width="1625" height="818" alt="image" src="https://github.com/user-attachments/assets/4d8e694c-eb47-488f-80b1-2d9a3de7a5b8" />
+
+<img width="1632" height="814" alt="image" src="https://github.com/user-attachments/assets/43132022-acf3-40e3-938a-384661c61de7" />
+
+
