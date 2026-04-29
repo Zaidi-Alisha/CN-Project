@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenVPN Creation Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scene">
+      <div class="grid-layer"></div>
+      <div class="light-ring"></div>
+    </div>
+
+    <header class="hero-bar">
+      <div>
+        <h1>OpenVPN Creation Studio</h1>
+        <p>Build your secure VPN server, generate certificates, and visualize the network tunnel.</p>
+      </div>
+      <div class="hero-badge">Secure VPN Project</div>
+    </header>
+
+    <main class="layout">
+      <section class="panel form-panel">
+        <h2>Configure your VPN</h2>
+        <div class="field-grid">
+          <label>Server Name<input id="serverName" value="vpn-server" /></label>
+          <label>Client Name<input id="clientName" value="vpn-client" /></label>
+          <label>Server Host<input id="serverHost" value="vpn.example.com" /></label>
+          <label>Protocol<select id="protocol"><option value="udp">UDP</option><option value="tcp">TCP</option></select></label>
+          <label>Port<input id="port" type="number" value="1194" /></label>
+          <label>VPN Subnet<input id="vpnSubnet" value="10.8.0.0" /></label>
+          <label>Subnet Mask<input id="vpnMask" value="255.255.255.0" /></label>
+        </div>
+        <button id="generateBtn" class="primary-btn">Generate VPN Profile</button>
+        <p class="hint">Outputs are saved to the <code>output/</code> folder on the server.</p>
+      </section>
+
+      <section class="panel visual-panel">
+        <div class="visual-card">
+          <div class="node server-node">Server</div>
+          <div class="node cloud-node">Internet</div>
+          <div class="node client-node">Client</div>
+          <div class="tunnel-line"></div>
+        </div>
+        <div class="status-card">
+          <h3>VPN Pipeline</h3>
+          <ul>
+            <li>OpenVPN server config generation</li>
+            <li>CA / server / client certificate creation</li>
+            <li>Encrypted AES-256-GCM tunnel</li>
+            <li>Routing and NAT-ready server profile</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel output-panel">
+        <h2>Generated Output</h2>
+        <div class="output-tabs">
+          <button class="tab active" data-target="serverOutput">Server Config</button>
+          <button class="tab" data-target="clientOutput">Client Profile</button>
+        </div>
+        <pre id="serverOutput" class="output-block"></pre>
+        <pre id="clientOutput" class="output-block hidden"></pre>
+        <div class="download-row">
+          <button id="downloadServer" class="secondary-btn">Download server.conf</button>
+          <button id="downloadClient" class="secondary-btn">Download client.ovpn</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
